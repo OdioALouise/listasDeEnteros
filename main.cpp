@@ -34,6 +34,11 @@ int main(){
   Enteros *listaDivisores = divisores(listaDecana, dividendo);
   imprimirLista(listaDivisores);
 
+
+  listaCoprimos = coprimos(listaDecana, 100);
+  printf("Resultados de la prueba coprimos \n");
+  imprimirLista(listaCoprimos);
+
   return 0;
 }
 
