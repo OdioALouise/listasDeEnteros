@@ -13,7 +13,7 @@ void agrNodo(Enteros *listaEnteros, int n);
 void imprimirLista(Enteros *listaEnteros);
 bool esEnLista(Enteros *listaEnteros, int n);
 void eliminarNodo(Enteros *listaEnteros, int n);
-Enteros* divisores(Enteros *listaEnteros, int n);
+Enteros* divisores(int n);
 Enteros* divisoresComunes(Enteros *listaEnteros, int n, int m);
 int maximoComunDivisor(Enteros *listaEnteros, int n, int m);
 int minimoComunMultiplo(Enteros *listaEnteros, int n, int m);

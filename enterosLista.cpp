@@ -60,14 +60,38 @@ void eliminarNodo(Enteros *listaEnteros, int n){
 }
 
 
-Enteros* divisores(Enteros *listaEnteros, int n){
+Enteros* divisores(int n){
   Enteros *lDiv = (struct Enteros *) malloc(sizeof(struct Enteros));
   return lDiv;
 }
 
-Enteros* divisoresComunes(Enteros *listaEnteros, int n, int m){
-  Enteros *comDiv = (struct Enteros *) malloc(sizeof(struct Enteros));
-  return comDiv;
+Enteros* divisoresComunes(int n, int m){
+  Enteros *listm = (struct Enteros *) malloc(sizeof(struct Enteros));
+  Enteros *listn = (struct Enteros *) malloc(sizeof(struct Enteros));
+
+  listm = divisores (m);
+  listn = divisores (n);
+
+  Enteros *listDC = (struct Enteros *) malloc(sizeof(struct Enteros));
+
+  Enteros *cabezal;
+  cabezal = listm;
+  while( (cabezal = cabezal->sig)!= NULL ){
+
+    Enteros *cabezal2;
+    cabezal2 = listn;
+    while( (cabezal2 = cabezal2->sig)!= NULL ){
+      if (cabezal->n == cabezal2->n){
+          //Agregar cabezal.n a la lista listDC porque esta en ambas lista de divisores usando la funcion agrNodo(una lista, el valor a agregarle a esa lista) 
+        agrNodo(listDC,cabezal->n);
+   
+        
+      }
+
+    }
+
+  }
+return listDC;
 }
 
 int maximoComunDivisor(Enteros *listaEnteros, int n, int m){
