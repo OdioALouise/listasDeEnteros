@@ -106,6 +106,17 @@ int minimoComunMultiplo(Enteros *listaEnteros, int n, int m){
 
 Enteros* coprimos(Enteros *listaEnteros, int n){
   Enteros *lCop = (struct Enteros *) malloc(sizeof(struct Enteros));
+
+
+  Enteros *cabezal;                                             //Declaro puntero
+  cabezal = listaEnteros;                                      //apunto a lista de enteros
+  while((cabezal = cabezal->sig)!= NULL ){                    //recorro todos los valores de la lista de enteros
+    if (maximoComunDivisor(n, cabezal->n) == 1){                                   //preguntar si son coprimos
+     agrNodo(lCop, cabezal->n);
+                                                               //y si los son agregar cabezal.n a lCop con la funcion agrNodo(lista, valor)
+    }
+  }
   return lCop;
 }
+
 
