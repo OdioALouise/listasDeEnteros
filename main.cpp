@@ -33,7 +33,9 @@ int main(){
   int dividendo = 100;
   Enteros *listaDivisores = divisores(listaDecana, dividendo);
   imprimirLista(listaDivisores);
-
+  
+  int mcm = minimoComunMultiplo(3,4);
+  printf("MInimo comun multiplo %d \n", mcm);
   return 0;
 }
 

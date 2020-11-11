@@ -94,16 +94,17 @@ Enteros* divisoresComunes(int n, int m){
 return listDC;
 }
 
-int maximoComunDivisor(Enteros *listaEnteros, int n, int m){
+int maximoComunDivisor(int n, int m){
   int mcd = 0;
   return mcd;
 }
 
-int minimoComunMultiplo(Enteros *listaEnteros, int n, int m){
-  int mcm = 0;
+int minimoComunMultiplo(int n, int m){
+  int mcm;
+  mcm=n*m/maximoComunDivisor(n, m);
   return mcm;
 }
-
+  
 Enteros* coprimos(Enteros *listaEnteros, int n){
   Enteros *lCop = (struct Enteros *) malloc(sizeof(struct Enteros));
 
