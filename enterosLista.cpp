@@ -65,13 +65,22 @@ Enteros* divisores(Enteros *listaEnteros, int n){
   return lDiv;
 }
 
-Enteros* divisoresComunes(Enteros *listaEnteros, int n, int m){
+Enteros* divisoresComunes(int n, int m){
   Enteros *comDiv = (struct Enteros *) malloc(sizeof(struct Enteros));
   return comDiv;
 }
 
 int maximoComunDivisor(Enteros *listaEnteros, int n, int m){
   int mcd = 0;
+  Enteros *listaDC = (struct Enteros *) malloc(sizeof(struct Enteros));
+
+  listaDC=divisorescomunes
+  
+  Enteros *cabezal;
+  cabezal = listaDC;
+  while( (cabezal = cabezal->sig)!= NULL ){
+     if (mcd<cabezal->n)
+        (mcd=cabezal->n);
   return mcd;
 }
 
