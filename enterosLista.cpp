@@ -96,6 +96,16 @@ return listDC;
 
 int maximoComunDivisor(Enteros *listaEnteros, int n, int m){
   int mcd = 0;
+  Enteros *listaDC = (struct Enteros *) malloc(sizeof(struct Enteros));
+
+  listaDC=divisoresComunes (n,m);
+  
+  Enteros *cabezal;
+  cabezal = listaDC;
+  while( (cabezal = cabezal->sig)!= NULL ){
+     if (mcd<cabezal->n)
+        mcd=cabezal->n;
+}
   return mcd;
 }
 
